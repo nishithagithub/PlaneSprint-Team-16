@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <style>
+    button
+    {
+      background-color: darkcyan;
+      width:100px;
+    }
+  </style>
+</head>
+<body>
+  <center><h2 style="color:darkcyan;" id="p1">VIEW CART</h2></center>
+  
+  <table>
+    <thead> 
+            <fieldset style="border-radius: 50px; border-color: darkcyan; height: 45px; "> 
+              <h4><pre style="font-size: 20px;font-family: 'Times New Roman', Times, serif;">            ITEM                                                   QUANTITY                                                                 PRICE                                                                  COST </pre>
+              </h4> </fieldset>
+    </thead>
+    <tbody>
+      {% for item, quantity in cart %}
+        <fieldset style="border-radius: 50px; border-color: darkcyan; height: 45px; ">
+          <h4><pre style="font-size: 20px;font-family: 'Times New Roman', Times, serif;">              {{ item }}                                            {{ quantity }}                                                {{ get_item_price(item) }}                                              {{ get_item_price(item) * quantity }}</pre>
+          </h4> </fieldset> 
+          <p> Total  :   {{ get_item_price(item) }} </p>
+      {% endfor %}  
+    </tbody>
+  </table>
+  <button href="payment.html">PAY NOW </button>
+
+
+
+
+
+
+

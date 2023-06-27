@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Form</title>
+  <link rel="stylesheet" type="text/css" href="pay.css">
+</head>
+<body>
+  <h1>Payment Form</h1>
+  <form id="paymentForm" onsubmit="submitForm(event)">
+    <div>
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" required>
+    </div>
+    <div>
+      <label for="cardHolder">Card Holder:</label>
+      <input type="text" id="cardHolder" required>
+    </div>
+    <div>
+      <label for="expirationDate">Expiration Date:</label>
+      <input type="text" id="expirationDate" placeholder="MM/YY" required>
+    </div>
+    <div>
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" maxlength="3" required>
+    </div>
+    <div>
+      <input type="submit" value="Book Order">
+    </div>
+  </form>
+
+  <div id="orderStatus"></div>
+
+  <script src="valid_pay.js"></script>
+</body>
+</html>

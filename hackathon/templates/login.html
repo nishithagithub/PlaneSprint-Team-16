@@ -1,0 +1,64 @@
+
+<html>
+  <head>
+    <title>login page</title>
+    <style>
+      .bg-img {
+background-image: url(http://wallup.net/wp-content/uploads/2015/12/40105-gradient-simple_background-colorful-abstract.jpg);
+min-height: 720px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+.container {
+position: center;
+margin: auto;
+max-width: 30%;
+max-height: 75%;
+padding: 30px;
+border-radius:20px;
+background-color:silver;
+background: rgba(0, 0, 0, 0.2);}
+input[type="button"] {
+            width: 120px;
+            height: 50px;
+            background-color:deepskyblue;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+        }
+input[type="text"]{
+          border-radius:5px;
+}
+input[type="password"]{
+          border-radius:5px;
+}
+  </style>
+  </head>
+  <body>
+   <div class="bg-img">
+   <input type="image" src="https://static.thenounproject.com/png/251451-200.png" style="width:30px;height:30px;" onclick="back()">
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+      <div class="container">
+        <h1 style="font-size: 50px;">Login!</h1>
+                <form action="http://127.0.0.1:5000/lsubmit" method="POST">
+                    <h3>Email_id </h3><input style="height: 30px;width: 370px; border: 1px white;" type="text" name="email" placeholder="Enter Number instead">
+                    <br>
+                    <br>
+                    <h3>Password</h3> <input style="height: 30px;width: 370px; border: 1px white;" type="password" name="pwd">
+                    <br>
+                    <br>
+                    <center><input type="submit" value="LOGIN" ></center>
+                    <p>Not Registered? &nbsp<a href="signup.html" >Sign&nbspin</a> </p>
+                </form>
+      </div>
+    </div>
+
+  </body>
+</html>
