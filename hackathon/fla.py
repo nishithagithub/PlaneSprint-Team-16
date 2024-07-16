@@ -27,6 +27,7 @@ def index7():
 @app.route('/signup')
 def index8():
     return render_template('signup.html')
+
 @app.route('/add_to_cart', methods=['POST'])
 def add_to_cart():
     item = request.form.get('item')
@@ -35,7 +36,9 @@ def add_to_cart():
     cart_items = session.get('cart', [])
     cart_items.append((item, quantity))
     session['cart'] = cart_items
-
+    return redirect('/index')
+@app.route('/back',methods=['POST'])
+def back():
     return redirect('/index')
 @app.route('/Submit', methods=['POST'])
 def submit():
