@@ -45,7 +45,7 @@ def submit():
     password = request.form.get('newpassword')
 
     # Connect to the database
-    conn = sqlite3.connect('dat.db')
+    conn = sqlite3.connect('data.db')
     cursor = conn.cursor()
 
     # Create a table if it doesn't exist
@@ -84,7 +84,7 @@ def lsubmit():
     if result:
             # User exists, perform necessary actions
             # Redirect to another page or return a success message
-        return  render_template('hackathon.html')
+        return  render_template('index.html')
     else:
             # User does not exist or invalid credentials
             # Redirect to an error page or return an error message
