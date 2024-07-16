@@ -5,8 +5,28 @@ app.secret_key = 'nishiitha'  # Change this to a secure key in a production envi
 
 @app.route('/')
 def index():
-    return render_template('hackathon.html')
-
+    return render_template('home.html')
+@app.route('/index')
+def indexhtml():
+    return render_template('index.html')
+@app.route('/h2')
+def index3():
+    return render_template('h2.html')
+@app.route('/kritunga')
+def index4():
+    return render_template('kritunga.html')
+@app.route('/pista')
+def index5():
+    return render_template('pista.html')
+@app.route('/paradise')
+def index6():
+    return render_template('paradise.html')
+@app.route('/login')
+def index7():
+    return render_template('login.html')
+@app.route('/signup')
+def index8():
+    return render_template('signup.html')
 @app.route('/add_to_cart', methods=['POST'])
 def add_to_cart():
     item = request.form.get('item')
